@@ -1,10 +1,9 @@
 # 📘 PythonForge: From Zero to Professional Python Developer
-
 ## Your 8 week journey to proficiency starts today
 
 ![Voyage](assets/voyage.jpg)
 
-Welcome to **PythonForge**, a practical,  Python programming course designed for hands-on learning using real-world projects, labs, and exercises.
+Welcome to **PythonForge**, a practical, Python programming course designed for hands-on learning using real-world projects, labs, and exercises.
 
 This course follows a structured roadmap based on modern Python development practices.
 
@@ -51,15 +50,21 @@ Before starting, ensure you have:
 
 We use **UV** to manage Python environments automatically.
 
-**Install UV:**
+**Install UV — Mac/Linux:**
 
 ```bash
 curl -Ls https://astral.sh/uv/install.sh | bash
 ```
 
+**Install UV — Windows (PowerShell):**
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
 Restart your terminal after installation.
 
-**Verify:**
+**Verify (all platforms):**
 
 ```bash
 uv --version
@@ -109,16 +114,16 @@ uv run jupyter lab
 Please do message me or email me at kyerematengcollins93@gmail.com if this doesn't work or if I can help with anything. I can't wait to hear how you get on.
 
 <table style="margin: 0; text-align: left;">
-    <tr>
-        <td style="width: 150px; height: 150px; vertical-align: middle;">
-            <img src="assets/resources.jpg" width="150" height="150" style="display: block;" />
-        </td>
-        <td>
-            <h2 style="color:#f71;">Other resources</h2>
-            <span style="color:#f71;">I've put together this webpage with useful resources for the course. This includes links to all the slides.<br/>
-            <a href="https://roadmap.sh/python">Python Road Map</a><br/>
-            Please keep this bookmarked, and I'll continue to add more useful links there over time.
-            </span>
-        </td>
-    </tr>
+<tr>
+<td style="width: 150px; height: 150px; vertical-align: middle;">
+<img src="assets/resources.jpg" width="150" height="150" style="display: block;" />
+</td>
+<td>
+<h2 style="color:#f71;">Other resources</h2>
+<span style="color:#f71;">I've put together this webpage with useful resources for the course. This includes links to all the slides.<br/>
+<a href="https://roadmap.sh/python">Python Road Map</a><br/>
+Please keep this bookmarked, and I'll continue to add more useful links there over time.
+</span>
+</td>
+</tr>
 </table>
