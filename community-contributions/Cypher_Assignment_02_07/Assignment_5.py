@@ -191,15 +191,15 @@ last_4 = full_name[-4:]
 name_length = len(full_name)
 
 if 80 <= score <= 100:
-    grade = "Excellent"
+    status = "Excellent"
 elif 70 <= score <= 79:
-    grade = "Very Good"
+    status = "Very Good"
 elif 60 <= score <= 69:
-    grade = "Good"
+    status = "Good"
 elif 50 <= score <= 59:
-    grade = "Pass"
+    status = "Pass"
 else:
-    grade = "Fail"
+    status = "Fail"
 
 print("\nStudent Registration Details:")
 print("Name in uppercase: ", name_upper)
@@ -210,3 +210,4 @@ print("Name length: ", name_length)
 print("\n -----Academic Status-----")
 print("score: ", score)
 print("Status: ", status)
+
