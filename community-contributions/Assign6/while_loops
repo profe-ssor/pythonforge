@@ -1,0 +1,181 @@
+# Question 1: Student Login System
+# Create a program that repeatedly asks the user to enter a username and password
+
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+while username == "Student" and password == "python123":
+    print("Welcome, Student!")
+    break
+
+# Question 2: Multiplication Table Generator
+# Ask the user to enter a positive integer. Using a while loop, display the multiplication table for that number from 1 to 12.
+number = int(input("Enter a positive integer: "))
+i = 1
+while i <= 12:
+    print(f"{number} x {i} = {number * i}")
+    i += 1
+
+
+
+#  Question 3: Sum of User-Entered Numbers
+total_sum = 0
+count = 0
+
+while True:
+    number = int(input("Enter a number (0 to stop): "))
+    if number == 0:
+        break
+    total_sum += number
+    count += 1
+
+print(f"The total sum of all numbers entered is: {total_sum}")
+print(f"The number of values entered (excluding 0) is: {count}")
+
+
+# Question 4: Number Guessing Game
+# Set a secret number to 25. Ask the user to guess the number. Continue asking until the correct number is entered. If the guess is too low, display "Too low!". If the guess is too high, display "Too high!". When the correct number is guessed, congratulate the user and display the total number of attempts.
+
+secret_number = 25
+attempts = 0
+
+while True:
+    guess = int(input("Guess the number: "))
+    attempts += 1
+    if guess < secret_number:
+        print("Too low!")
+    elif guess > secret_number:
+        print("Too high!")
+    else:
+        print(f"Congratulations! You guessed the number in {attempts} attempts.")
+        break
+
+
+# Question 5: ATM Menu Simulation
+balance = 1000
+while True:
+    print("\nATM Menu:")
+    print("1. Check Balance")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Exit")
+
+    choice = input("Choose an option (1-4): ")
+
+    if choice == "1":
+        print(f"Your current balance is: GHS {balance}")
+    elif choice == "2":
+        deposit = float(input("Enter the amount to deposit: GHS "))
+        balance += deposit
+        print(f"Deposit successful! Your new balance is: GHS {balance}")
+    elif choice == "3":
+        withdraw = float(input("Enter the amount to withdraw: GHS "))
+        if withdraw > balance:
+            print("Insufficient funds! Transaction failed.")
+        else:
+            balance -= withdraw
+            print(f"Withdrawal successful! Your new balance is: GHS {balance}")
+    elif choice == "4":
+        print("Thank you for using the ATM. Goodbye!")
+        break
+    else:
+        print("Invalid option! Please choose a valid option (1-4).")
+
+
+# 6 PIN Virification
+correct_pin = "4321"
+attempts = 0
+
+while attempts < 3:
+    pin = input("Enter 4-digit PIN: ")
+
+    if pin == correct_pin:
+        print("Access Granted.")
+        break
+    else:
+        attempts += 1
+        remaining = 3 - attempts
+
+        if remaining > 0:
+            print("Wrong PIN. Attempts remaining:", remaining)
+        else:
+            print("Account Locked.")
+
+
+# Question 7: Find the Largest Number
+
+largest = None
+
+while True:
+    num = int(input("Enter a number (-1 to stop): "))
+
+    if num == -1:
+        break
+
+    if largest is None or num > largest:
+        largest = num
+
+if largest is None:
+    print("No numbers were entered.")
+else:
+    print("Largest number entered:", largest)
+
+
+# Question 8: Count Positive, Negative, and Zero Values
+
+positive = 0
+negative = 0
+zero = 0
+
+while True:
+    num = int(input("Enter an integer (999 to stop): "))
+
+    if num == 999:
+        break
+
+    if num > 0:
+        positive += 1
+    elif num < 0:
+        negative += 1
+    else:
+        zero += 1
+
+print("Positive numbers:", positive)
+print("Negative numbers:", negative)
+print("Zeros:", zero)
+
+
+# Question 9: Student Marks Analyzer
+
+count = 0
+total = 0
+highest = None
+lowest = None
+
+while True:
+    mark = int(input("Enter student mark (0-100) or -1 to stop: "))
+
+    if mark == -1:
+        break
+
+    if 0 <= mark <= 100:
+        count += 1
+        total += mark
+
+        if highest is None or mark > highest:
+            highest = mark
+
+        if lowest is None or mark < lowest:
+            lowest = mark
+    else:
+        print("Invalid mark. Enter a value between 0 and 100.")
+
+if count == 0:
+    print("No marks were entered.")
+else:
+    average = total / count
+
+    print("Total marks entered:", count)
+    print("Average mark:", average)
+    print("Highest mark:", highest)
+    print("Lowest mark:", lowest)
+    
